@@ -14,6 +14,10 @@ ReactDOM.render(
       domain="dev-nojwfowk.us.auth0.com"
       clientId="69340HSFwFxtbJKDN7vI1ifg1QK2fwcb"
       redirectUri={window.location.origin}
+
+      // login through social login doesnt stores the cache to ensure storage of cache 
+      //using localstorage for social logins
+      cacheLocation='localstorage'
     >
       <GithubProvider>
         <App />
